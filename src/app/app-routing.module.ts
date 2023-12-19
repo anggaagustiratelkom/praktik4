@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'detail',
+    redirectTo: 'dashboar',
+  },
+  {
+    path: 'dashboar',
+    component: DashboarComponent,
   },
   {
     path: 'detail',
