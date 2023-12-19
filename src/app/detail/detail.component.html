@@ -11,10 +11,17 @@
             alt="Profile Picture"
           />
         </div>
-        <div class="my-card-info">
-          <h2 class="text-xl font-semibold">{{ name }}</h2>
-          <p class="text-base">{{ location }}</p>
-          <p class="text-xl font-semibold">{{ balance }}</p>
+        <div *ngFor="let item of praktiks" class="my-card-info">
+          <h2 class="text-xl font-semibold">
+            {{ item.id }}
+          </h2>
+          <p class="text-base">
+            <span>Negara : </span>{{ item.country }} <span>Kota : </span>
+            {{ item.city }}
+          </p>
+          <p class="text-xl font-semibold">
+            {{ item.balance }} {{ item.currency }}
+          </p>
         </div>
       </div>
     </div>

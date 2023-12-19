@@ -15,4 +15,18 @@ export class PraktikService {
   getAll(): Observable<praktik[]> {
     return this.http.get<praktik[]>(baseUrl);
   }
+  get(id: any): Observable<praktik> {
+    return this.http.get(`${baseUrl}/${id}`);
+  }
+
+  // Post data
+  post(title: string, desc: string) {
+    const body = { title: title, desc: desc };
+    return this.http.post(`${baseUrl}`, body);
+  }
+
+  // Delete data
+  delete(id: any) {
+    return this.http.delete(`${baseUrl}/${id}`);
+  }
 }

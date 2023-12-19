@@ -19,4 +19,13 @@ export class DashboarComponent implements OnInit {
       console.log('success data', item);
     });
   }
+  getDataTutorialId(id: any) {
+    this.praktikService.get(id).subscribe((item) => {
+      console.log('success get data', item);
+    });
+  }
+  showModal = false;
+  toggleModal() {
+    this.showModal = !this.showModal;
+  }
 }
