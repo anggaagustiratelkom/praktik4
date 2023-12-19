@@ -13,19 +13,32 @@ export class DashboarComponent implements OnInit {
   ngOnInit(): void {
     this.getDataPraktik();
   }
+  showModal = false;
+  toggleModal() {
+    this.showModal = !this.showModal;
+  }
   getDataPraktik() {
     this.praktikService.getAll().subscribe((item) => {
       this.praktiks = item;
       console.log('success data', item);
     });
   }
-  getDataTutorialId(id: any) {
+  getDataPraktikById(id: any) {
     this.praktikService.get(id).subscribe((item) => {
       console.log('success get data', item);
     });
   }
-  showModal = false;
-  toggleModal() {
-    this.showModal = !this.showModal;
+  postDataPraktik(
+    name: string,
+    country: string,
+    city: string,
+    balance: string,
+    currency: string
+  ) {
+    this.praktikService
+      .post(name, country, city, balance, currency)
+      .subscribe((item) => {
+        console.log('success post data', item);
+      });
   }
 }

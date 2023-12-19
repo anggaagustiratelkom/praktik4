@@ -20,8 +20,20 @@ export class PraktikService {
   }
 
   // Post data
-  post(title: string, desc: string) {
-    const body = { title: title, desc: desc };
+  post(
+    name: string,
+    country: string,
+    city: string,
+    balance: string,
+    currency: string
+  ) {
+    const body = {
+      name: name,
+      country: country,
+      city: city,
+      balance: balance,
+      currency: currency,
+    };
     return this.http.post(`${baseUrl}`, body);
   }
 

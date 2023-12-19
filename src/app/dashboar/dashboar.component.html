@@ -86,70 +86,94 @@
           </button> -->
         </div>
         <!--body-->
-        <form class="p-4 md:p-5">
+        <div class="input-data p-4 md:p-5">
           <div class="grid gap-4 mb-4 grid-cols-2">
             <div class="col-span-2">
               <label
                 for="name"
                 class="block mb-2 text-sm font-medium text-white dark:text-white"
-                >Name</label
+                >Nama</label
               >
               <input
+                #name
                 type="text"
                 name="name"
                 id="name"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                placeholder="Type product name"
+                placeholder="Tulis Nama"
                 required=""
               />
             </div>
             <div class="col-span-2 sm:col-span-1">
               <label
-                for="price"
+                for="balance"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >Price</label
               >
               <input
-                type="number"
-                name="price"
-                id="price"
+                #balance
+                type="text"
+                name="balance"
+                id="balance"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                placeholder="$2999"
+                placeholder="0"
                 required=""
               />
             </div>
             <div class="col-span-2 sm:col-span-1">
               <label
-                for="category"
+                for="currency"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >Category</label
+                >Currency</label
               >
               <select
-                id="category"
+                #currency
+                id="currency"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
               >
-                <option selected="">Select category</option>
-                <option value="TV">TV/Monitors</option>
-                <option value="PC">PC</option>
-                <option value="GA">Gaming/Console</option>
-                <option value="PH">Phones</option>
+                <option selected="">Select Currency</option>
+                <option value="IDR">IDR</option>
+                <option value="SGD">SGD</option>
+                <option value="USD">USD</option>
+                <option value="AUD">AUD</option>
               </select>
             </div>
+
             <div class="col-span-2">
               <label
-                for="description"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >Product Description</label
+                for="country"
+                class="block mb-2 text-sm font-medium text-white dark:text-white"
+                >Negara Asal</label
               >
-              <textarea
-                id="description"
-                rows="4"
-                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Write product description here"
-              ></textarea>
+              <input
+                #country
+                type="text"
+                name="country"
+                id="country"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                placeholder="Tulis Negara Asal"
+                required=""
+              />
+            </div>
+
+            <div class="col-span-2">
+              <label
+                for="city"
+                class="block mb-2 text-sm font-medium text-white dark:text-white"
+                >Kota Asal</label
+              >
+              <input
+                #city
+                type="text"
+                name="city"
+                id="city"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                placeholder="Tulis Negara Asal"
+                required=""
+              />
             </div>
           </div>
-          <button
+          <!-- <button
             type="submit"
             class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
@@ -166,26 +190,35 @@
               ></path>
             </svg>
             Add new product
-          </button>
-        </form>
-        <!--footer-->
-        <div
-          class="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b"
-        >
-          <button
-            class="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-            type="button"
-            (click)="toggleModal()"
+          </button> -->
+
+          <!--footer-->
+          <div
+            class="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b"
           >
-            Close
-          </button>
-          <button
-            class="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-            type="button"
-            (click)="toggleModal()"
-          >
-            Save Changes
-          </button>
+            <button
+              class="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+              type="button"
+              (click)="toggleModal()"
+            >
+              Close
+            </button>
+            <button
+              class="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+              (click)="
+                postDataPraktik(
+                  name.value,
+                  country.value,
+                  city.value,
+                  balance.value,
+                  currency.value
+                )
+              "
+              (click)="toggleModal()"
+            >
+              Submit
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -234,7 +267,7 @@
             <button
               mat-button
               routerLink="/detail"
-              (click)="getDataTutorialId(item.id)"
+              (click)="getDataPraktikById(item.id)"
               class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
             >
               Edit

@@ -16,7 +16,7 @@ export class DetailComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  getDataTutorialId(id: any) {
+  getDataPraktikById(id: any) {
     this.praktikService.get(id).subscribe((item) => {
       console.log('success get data', item);
     });
