@@ -34,12 +34,11 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
       - name: Install Dependencies
-        if: steps.cache-nodemodules.outputs.cache-hit != 'true'
-        run: |
-          npm ci
-      - name: Lint
-        run: |
-          npm run lint
-      - name: Test
-        run: |
-          npm run test
+        run: npm install
+      - name: Build
+        run: npm run build-prod
+      - name: Deploy
+        run: npm run deploy
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_HREF: /angular-boilerplate/
